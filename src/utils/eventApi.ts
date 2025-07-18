@@ -11,7 +11,10 @@ export async function createEvent(data: Event): Promise<Event> {
   return res.data;
 }
 
-export async function updateEvent(id: string, data: Partial<Event>): Promise<Event> {
+export async function updateEvent(
+  id: string,
+  data: Partial<Event>
+): Promise<Event> {
   const res = await axios.put(`/events/${id}`, data);
   return res.data;
 }

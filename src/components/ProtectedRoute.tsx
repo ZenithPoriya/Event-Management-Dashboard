@@ -1,7 +1,6 @@
 "use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function ProtectedRoute({
   children,
@@ -10,15 +9,24 @@ export default function ProtectedRoute({
 }) {
   const { user, loading } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
 
-  useEffect(() => {
-    if (!loading && !user) {
-      router.push("/login");
+  const isAuthPage = pathname === "/login" || pathname === "/signup";
+  const isProtectedPage = pathname === "/dashboard";
+
+  if (!loading) {
+    if (user && isAuthPage) {
+      router.replace("/dashboard");
+      return null;
     }
-  }, [user, loading, router]);
 
-  console.log({ loading });
-  if (loading) return <div className="p-10 text-center">Loading...</div>;
+    if (!user && isProtectedPage) {
+      router.replace("/login");
+      return null;
+    }
+  }
 
-  if (!loading && user) return <>{children}</>;
+  if (loading) return null;
+
+  return <>{children}</>;
 }

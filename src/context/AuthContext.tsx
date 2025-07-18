@@ -42,6 +42,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (!context) throw new Error("useAuth error");
+  if (!context) throw new Error("Auth context not found");
   return context;
 };

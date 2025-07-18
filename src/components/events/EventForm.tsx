@@ -29,9 +29,7 @@ export default function EventForm({
   });
 
   useEffect(() => {
-    if (event) {
-      reset(event);
-    }
+    if (event) reset(event);
   }, [event, reset]);
 
   const onSubmit = async (data: Event) => {
@@ -72,6 +70,7 @@ export default function EventForm({
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
       <div>
+        <label className="block font-medium">Title</label>
         <input
           {...register("title", { required: "Title is required" })}
           placeholder="Title"
@@ -83,6 +82,7 @@ export default function EventForm({
       </div>
 
       <div>
+        <label className="block font-medium">Description</label>
         <textarea
           {...register("description", { required: "Description is required" })}
           placeholder="Description"
@@ -94,6 +94,7 @@ export default function EventForm({
       </div>
 
       <div>
+        <label className="block font-medium">Event Type</label>
         <select
           {...register("eventType", { required: "Event type is required" })}
           className="w-full border px-3 py-2 rounded"
@@ -109,6 +110,7 @@ export default function EventForm({
 
       {eventType === "Online" && (
         <div>
+          <label className="block font-medium">Event Link</label>
           <input
             {...register("eventLink", {
               required: "Event link is required for online events",
@@ -124,6 +126,7 @@ export default function EventForm({
 
       {eventType === "In-Person" && (
         <div>
+          <label className="block font-medium">Location</label>
           <input
             {...register("location", {
               required: "Location is required for in-person events",
@@ -138,6 +141,7 @@ export default function EventForm({
       )}
 
       <div>
+        <label className="block font-medium">Start Date & Time</label>
         <input
           type="datetime-local"
           {...register("startDateTime", { required: "Start time is required" })}
@@ -149,6 +153,7 @@ export default function EventForm({
       </div>
 
       <div>
+        <label className="block font-medium">End Date & Time</label>
         <input
           type="datetime-local"
           {...register("endDateTime", { required: "End time is required" })}
@@ -160,15 +165,31 @@ export default function EventForm({
       </div>
 
       <div>
-        <input
+        <label className="block font-medium">Category</label>
+        <select
           {...register("category", { required: "Category is required" })}
-          placeholder="Category"
           className="w-full border px-3 py-2 rounded"
-        />
+        >
+          <option value="">Select Category</option>
+          <option value="Social">Social</option>
+          <option value="Personal">Personal</option>
+          <option value="Business">Business</option>
+        </select>
         {errors.category && (
           <p className="text-red-500 text-sm">{errors.category.message}</p>
         )}
       </div>
+
+      {user && (
+        <div>
+          <label className="block font-medium">Organizer</label>
+          <input
+            value={user.email}
+            disabled
+            className="w-full border px-3 py-2 rounded bg-gray-100 text-gray-500"
+          />
+        </div>
+      )}
 
       <div className="flex justify-end space-x-2">
         <button

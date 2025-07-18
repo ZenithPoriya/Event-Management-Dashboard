@@ -1,6 +1,7 @@
 const STORAGE_KEY = "event_dashboard_auth";
 
 type User = {
+  name: string;
   email: string;
   password: string;
 };
@@ -26,7 +27,7 @@ export function setAuthData(data: AuthData) {
 
 export function findUserByEmail(email: string): User | undefined {
   const data = getAuthData();
-  console.log({data,email})
+  console.log({ data, email });
   return data.users.find((u) => u.email === email);
 }
 

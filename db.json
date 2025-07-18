@@ -1,15 +1,40 @@
 {
   "events": [
     {
-      "id": "1752688098764-9608",
-      "title": "sdfa",
-      "description": "dsf",
+      "id": "1752770508916-3774",
+      "title": "New event",
+      "description": "Weekly team meeting Weekly team meeting",
+      "eventType": "In-Person",
+      "startDateTime": "2025-07-17T22:00",
+      "endDateTime": "2025-07-17T23:00",
+      "category": "Social",
+      "location": "GameZone",
+      "eventLink": "",
+      "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770512345-9821",
+      "title": "React Workshop",
+      "description": "Learn React with hands-on session",
       "eventType": "Online",
-      "startDateTime": "2025-07-16T23:20",
-      "endDateTime": "2025-07-16T00:50",
-      "category": "dfasd",
-      "eventLink": "sdf",
-      "organizer": "hello@gmail.com"
+      "startDateTime": "2025-07-18T14:00",
+      "endDateTime": "2025-07-18T16:00",
+      "category": "Business",
+      "location": "",
+      "eventLink": "https://meet.react.dev",
+      "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770521102-1345",
+      "title": "Health & Wellness Talk",
+      "description": "Talk about mental and physical wellness.",
+      "eventType": "In-Person",
+      "startDateTime": "2025-07-19T10:00",
+      "endDateTime": "2025-07-19T11:30",
+      "category": "Personal",
+      "location": "Wellness Center",
+      "eventLink": "",
+      "organizer": "zenith@gmail.com"
     }
   ]
 }

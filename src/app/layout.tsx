@@ -1,10 +1,8 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { AuthProvider } from "@/context/AuthContext";
 import { EventProvider } from "@/context/EventContext";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import ProtectedRoute from "@/components/ProtectedRoute";
 
 export const metadata: Metadata = {
   title: "Event Management Dashboard",
@@ -17,9 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <AuthProvider>
-          <EventProvider>{children}</EventProvider>
+          <ProtectedRoute>
+            <EventProvider>{children}</EventProvider>
+          </ProtectedRoute>
         </AuthProvider>
       </body>
     </html>

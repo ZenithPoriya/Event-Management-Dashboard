@@ -35,6 +35,66 @@
       "location": "Wellness Center",
       "eventLink": "",
       "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770551234-7721",
+      "title": "Vue Meetup",
+      "description": "Community gathering for Vue developers",
+      "eventType": "In-Person",
+      "startDateTime": "2025-07-20T15:00",
+      "endDateTime": "2025-07-20T17:00",
+      "category": "Social",
+      "location": "Tech Park Auditorium",
+      "eventLink": "",
+      "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770587451-2222",
+      "title": "Digital Marketing Webinar",
+      "description": "Learn modern SEO and social media techniques",
+      "eventType": "Online",
+      "startDateTime": "2025-07-21T09:00",
+      "endDateTime": "2025-07-21T11:00",
+      "category": "Business",
+      "location": "",
+      "eventLink": "https://marketing.zoom.us",
+      "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770609876-4444",
+      "title": "Personal Finance Workshop",
+      "description": "Basics of budgeting, saving, and investing",
+      "eventType": "In-Person",
+      "startDateTime": "2025-07-22T10:00",
+      "endDateTime": "2025-07-22T12:00",
+      "category": "Personal",
+      "location": "City Hall Room B",
+      "eventLink": "",
+      "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770633333-8888",
+      "title": "Tech Panel Discussion",
+      "description": "Industry leaders talk about AI and future of web",
+      "eventType": "Online",
+      "startDateTime": "2025-07-23T17:00",
+      "endDateTime": "2025-07-23T18:30",
+      "category": "Business",
+      "location": "",
+      "eventLink": "https://techpanel.com/join",
+      "organizer": "zenith@gmail.com"
+    },
+    {
+      "id": "1752770667890-9999",
+      "title": "Yoga for Beginners",
+      "description": "Basic poses and breathing techniques",
+      "eventType": "In-Person",
+      "startDateTime": "2025-07-24T07:30",
+      "endDateTime": "2025-07-24T09:00",
+      "category": "Personal",
+      "location": "Zen Garden",
+      "eventLink": "",
+      "organizer": "zenith@gmail.com"
     }
   ]
 }

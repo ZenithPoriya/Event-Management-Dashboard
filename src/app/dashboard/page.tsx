@@ -1,7 +1,7 @@
-"use client";
-import EventTable from "@/components/events/EventTable";
-import { useAuth } from "@/context/AuthContext";
-import { useRouter } from "next/navigation";
+'use client';
+import EventFilter from '@/components/events/EventFilters';
+import { useAuth } from '@/context/AuthContext';
+import { useRouter } from 'next/navigation';
 
 export default function DashboardPage() {
   const { logout } = useAuth();
@@ -9,7 +9,7 @@ export default function DashboardPage() {
 
   const handleLogout = () => {
     logout();
-    router.replace("/login");
+    router.replace('/login');
   };
 
   return (
@@ -23,7 +23,7 @@ export default function DashboardPage() {
           Logout
         </button>
       </div>
-      <EventTable />
+      <EventFilter />
     </div>
   );
 }
